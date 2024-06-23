@@ -48,7 +48,7 @@ import { MatDialog } from '@angular/material/dialog';
                                     Teléfono
                                 </th>
                                 <th class="w-2/6 table-header text-center">
-                                    Acciones
+                                    Especialidad
                                 </th>
                             </tr>
                         </thead>

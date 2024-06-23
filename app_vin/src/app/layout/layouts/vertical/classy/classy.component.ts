@@ -160,6 +160,13 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy {
                         icon: 'heroicons_outline:chart-pie',
                         link: '/homeScreen/setup/product',
                     },
+                    {
+                        id: 'SetupTeacher',
+                        title: 'Setup Docente',
+                        type: 'basic',
+                        icon: 'heroicons_outline:chart-pie',
+                        link: '/homeScreen/setup/teacher',
+                    },
 
                 ],
             },

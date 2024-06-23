@@ -45,15 +45,15 @@ import { MatInputModule } from '@angular/material/input';
             <form class="flex flex-col flex-auto p-6 sm:p-8 overflow-y-auto" [formGroup]="teacherForm">
                 <mat-form-field>
                     <mat-label>Nombre</mat-label>
-                    <input matInput formControlName="nombre" />
+                    <input matInput formControlName="nombreCompleto" />
                 </mat-form-field>
                 <mat-form-field>
                     <mat-label>Apellidos</mat-label>
-                    <input matInput formControlName="apellidos" />
+                    <input matInput formControlName="fechaNacimiento" />
                 </mat-form-field>
                 <mat-form-field>
-                    <mat-label>DNI</mat-label>
-                    <input matInput formControlName="dni" />
+                    <mat-label>Direccion</mat-label>
+                    <input matInput formControlName="direccion" />
                 </mat-form-field>
                 <mat-form-field>
                     <mat-label>Telefono</mat-label>
@@ -61,7 +61,11 @@ import { MatInputModule } from '@angular/material/input';
                 </mat-form-field>
                 <mat-form-field>
                     <mat-label>Correo</mat-label>
-                    <input matInput formControlName="correoElectronico" />
+                    <input matInput formControlName="email" />
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Especialidad</mat-label>
+                    <input matInput formControlName="especialidad" />
                 </mat-form-field>
                 <!-- Actions -->
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between mt-4 sm:mt-6">
