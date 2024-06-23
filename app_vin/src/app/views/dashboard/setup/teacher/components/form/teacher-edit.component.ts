@@ -74,13 +74,13 @@ import { MatDialogRef } from "@angular/material/dialog";
   `
 })
 export class TeacherEditComponent implements OnInit {
-    teacherForm = this.formBuilder.group({
-        nombreCompleto: ['', Validators.required],
-        fechaNacimiento: ['', Validators.required],
-        direccion: ['', Validators.required],
-        telefono: ['', Validators.required],
-        email: ['', [Validators.required, Validators.email]],
-        especialidad: ['', Validators.required],
+    teacherForm = new FormGroup({
+        nombreCompleto: new FormControl('', [Validators.required]),
+        fechaNacimiento: new FormControl('', [Validators.required]),
+        direccion: new FormControl('', [Validators.required]),
+        telefono: new FormControl('', [Validators.required]),
+        email: new FormControl('', [Validators.required]),
+        especialidad: new FormControl('', [Validators.required]),
     });
 
     @Input() title: string = '';

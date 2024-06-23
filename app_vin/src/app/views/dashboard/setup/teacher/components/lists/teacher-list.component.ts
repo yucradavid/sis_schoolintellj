@@ -34,18 +34,18 @@ import { MatDialog } from '@angular/material/dialog';
                                     Nombre Completo
                                 </th>
                                 <th class="w-2/6 table-header text-center px-5 border-r">
-                                    Apellidos
+                                    fechaNacimiento
                                 </th>
                                 <th class="w-2/6 table-header text-center px-5 border-r">
-                                    Correo Electronico
+                                    direccion
                                 </th>
 
                                 <th class="w-2/6 table-header text-center px-5 border-r">
-                                    DNI
+                                    telefono
                                 </th>
 
                                 <th class="w-1/6 table-header text-center border-r">
-                                    Teléfono
+                                    email
                                 </th>
                                 <th class="w-2/6 table-header text-center">
                                     Especialidad
