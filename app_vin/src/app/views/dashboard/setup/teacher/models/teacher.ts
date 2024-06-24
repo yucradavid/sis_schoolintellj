@@ -2,7 +2,7 @@ export class Teacher {
 
     id?: number;
     nombreCompleto?: string;
-    fechaNacimiento?: Date;
+    fechaNacimiento?: string;
     direccion?: string;
     telefono?: string;
     email?: string;

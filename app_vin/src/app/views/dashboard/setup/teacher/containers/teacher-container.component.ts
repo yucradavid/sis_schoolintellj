@@ -64,7 +64,7 @@ export class TeacherContainerComponent implements OnInit {
     public eventNew($event: boolean): void {
         if ($event) {
             const docenteForm = this._matDialog.open(TeacherNewComponent);
-            docenteForm.componentInstance.title = 'Nuevo Product' || null;
+            docenteForm.componentInstance.title = 'Nuevo Teacher' || null;
             docenteForm.afterClosed().subscribe((result: any) => {
                 if (result) {
                     this.saveTeacher(result);

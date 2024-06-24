@@ -34,7 +34,7 @@ import { MatDialog } from '@angular/material/dialog';
                                     Nombre Completo
                                 </th>
                                 <th class="w-2/6 table-header text-center px-5 border-r">
-                                    fechaNacimiento
+                                    fecha Nacimiento
                                 </th>
                                 <th class="w-2/6 table-header text-center px-5 border-r">
                                     direccion

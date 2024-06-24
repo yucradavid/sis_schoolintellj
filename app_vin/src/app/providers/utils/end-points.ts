@@ -14,6 +14,7 @@ export const END_POINTS = {
       client: 'cliente',
       product: 'producto',
       category: 'categoria',
+      teacher: 'docente',
     accesRole: 'acceso-rol',
     person: 'persona',
     institution: 'institucion',
