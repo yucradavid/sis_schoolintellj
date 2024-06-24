@@ -43,38 +43,52 @@ import { MatInputModule } from '@angular/material/input';
 
             <!-- Compose form -->
             <form class="flex flex-col flex-auto p-6 sm:p-8 overflow-y-auto" [formGroup]="teacherForm">
-                <mat-form-field>
-                    <mat-label>Nombre</mat-label>
-                    <input matInput formControlName="nombreCompleto" />
-                </mat-form-field>
-                <mat-form-field>
-                    <mat-label>Apellidos</mat-label>
-                    <input matInput formControlName="fechaNacimiento" />
-                </mat-form-field>
-                <mat-form-field>
-                    <mat-label>Direccion</mat-label>
-                    <input matInput formControlName="direccion" />
-                </mat-form-field>
-                <mat-form-field>
-                    <mat-label>Telefono</mat-label>
-                    <input matInput formControlName="telefono" />
-                </mat-form-field>
-                <mat-form-field>
-                    <mat-label>Correo</mat-label>
-                    <input matInput formControlName="email" />
-                </mat-form-field>
-                <mat-form-field>
-                    <mat-label>Especialidad</mat-label>
-                    <input matInput formControlName="especialidad" />
-                </mat-form-field>
-                <!-- Actions -->
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between mt-4 sm:mt-6">
-                    <div class="flex space-x-2 items-center mt-4 sm:mt-0 ml-auto">
-                        <button mat-stroked-button [color]="'warn'" (click)="cancelForm()">Cancelar</button>
-                        <button mat-stroked-button [color]="'primary'" (click)="saveForm()">
-                            Guardar
-                        </button>
-                    </div>
+                <!-- Nombre completo -->
+                <div class="mb-4">
+                    <label for="nombreCompleto" class="block text-sm font-medium text-gray-700">Nombre completo</label>
+                    <input type="text" id="nombreCompleto" matInput formControlName="nombreCompleto" placeholder="Nombre completo" required
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm">
+                </div>
+
+                <!-- Fecha de nacimiento -->
+                <div class="mb-4">
+                    <label for="fechaNacimiento" class="block text-sm font-medium text-gray-700">Fecha de nacimiento</label>
+                    <input type="date" id="fechaNacimiento" matInput formControlName="fechaNacimiento" required
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm">
+                </div>
+
+                <!-- Dirección -->
+                <div class="mb-4">
+                    <label for="direccion" class="block text-sm font-medium text-gray-700">Dirección</label>
+                    <input type="text" id="direccion" matInput formControlName="direccion" placeholder="Dirección" required
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm">
+                </div>
+
+                <!-- Teléfono -->
+                <div class="mb-4">
+                    <label for="telefono" class="block text-sm font-medium text-gray-700">Teléfono</label>
+                    <input type="tel" id="telefono" matInput formControlName="telefono" placeholder="Teléfono" required
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm">
+                </div>
+
+                <!-- Correo electrónico -->
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-700">Correo electrónico</label>
+                    <input type="email" id="email" matInput formControlName="email" placeholder="Correo electrónico" required
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm">
+                </div>
+
+                <!-- Especialidad -->
+                <div class="mb-4">
+                    <label for="especialidad" class="block text-sm font-medium text-gray-700">Especialidad</label>
+                    <input type="text" id="especialidad" matInput formControlName="especialidad" placeholder="Especialidad" required
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm">
+                </div>
+
+                <!-- Acciones -->
+                <div class="flex justify-end mt-6 space-x-4">
+                    <button mat-raised-button color="warn" (click)="cancelForm()">Cancelar</button>
+                    <button mat-raised-button color="primary" (click)="saveForm()" [disabled]="!teacherForm.valid">Guardar</button>
                 </div>
             </form>
         </div>
