@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import MainLayout from '../layouts/MainLayout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import '../App.css'; // Asegúrate de importar los estilos personalizados
+import '../App.css';
+import {faTrashAlt} from "@fortawesome/free-solid-svg-icons"; // Asegúrate de importar los estilos personalizados
 
 const Curso = () => {
 

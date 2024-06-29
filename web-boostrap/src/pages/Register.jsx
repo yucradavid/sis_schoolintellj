@@ -39,7 +39,7 @@ function Register() {
             return;
         }
         try {
-            const response = await fetch('http://localhost:82/auth/create', {
+            const response = await fetch('http://localhost:8080/auth/create', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
