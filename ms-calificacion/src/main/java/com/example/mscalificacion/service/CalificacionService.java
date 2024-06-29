@@ -1,22 +1,21 @@
 package com.example.mscalificacion.service;
 
 
-import com.example.mscalificacion.dto.CalificacionDto;
 import com.example.mscalificacion.entity.Calificacion;
 
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
+
 @Service
 public interface CalificacionService {
-    List<CalificacionDto> getAllCalificaciones();
+    List<Calificacion> getAllCalificaciones();
 
-    CalificacionDto getCalificacionById(Integer id);
+    Calificacion getCalificacionById(Integer id);
 
-    CalificacionDto createCalificacion(CalificacionDto calificacionDto);
+    Calificacion createCalificacion(Calificacion calificacion);
 
-    CalificacionDto updateCalificacion(Integer id, CalificacionDto calificacionDto);
+    Calificacion updateCalificacion(Integer id, Calificacion calificacion);
 
     void deleteCalificacion(Integer id);
 

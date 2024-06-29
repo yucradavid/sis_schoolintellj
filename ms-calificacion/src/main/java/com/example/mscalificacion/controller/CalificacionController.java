@@ -1,7 +1,6 @@
 package com.example.mscalificacion.controller;
 
 
-import com.example.mscalificacion.dto.CalificacionDto;
 import com.example.mscalificacion.entity.Calificacion;
 import com.example.mscalificacion.service.CalificacionService;
 
@@ -18,31 +17,32 @@ public class CalificacionController {
     private CalificacionService calificacionService;
 
     @GetMapping
-    public List<CalificacionDto> getAllCalificaciones() {
-        return calificacionService.getAllCalificaciones();
+    public ResponseEntity<List<Calificacion>> getAllCalificaciones() {
+        List<Calificacion> calificaciones = calificacionService.getAllCalificaciones();
+        return new ResponseEntity<>(calificaciones, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<CalificacionDto> getCalificacionById(@PathVariable Integer id) {
-        CalificacionDto calificacionDto = calificacionService.getCalificacionById(id);
-        return ResponseEntity.ok(calificacionDto);
+    public ResponseEntity<Calificacion> getCalificacionById(@PathVariable("id") Integer id) {
+        Calificacion calificacion = calificacionService.getCalificacionById(id);
+        return new ResponseEntity<>(calificacion, HttpStatus.OK);
     }
 
     @PostMapping
-    public ResponseEntity<CalificacionDto> createCalificacion(@RequestBody CalificacionDto calificacionDto) {
-        CalificacionDto newCalificacionDto = calificacionService.createCalificacion(calificacionDto);
-        return new ResponseEntity<>(newCalificacionDto, HttpStatus.CREATED);
+    public ResponseEntity<Calificacion> createCalificacion(@RequestBody Calificacion calificacion) {
+        Calificacion createdCalificacion = calificacionService.createCalificacion(calificacion);
+        return new ResponseEntity<>(createdCalificacion, HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<CalificacionDto> updateCalificacion(@PathVariable Integer id, @RequestBody CalificacionDto calificacionDto) {
-        CalificacionDto updatedCalificacionDto = calificacionService.updateCalificacion(id, calificacionDto);
-        return ResponseEntity.ok(updatedCalificacionDto);
+    public ResponseEntity<Calificacion> updateCalificacion(@PathVariable("id") Integer id, @RequestBody Calificacion calificacion) {
+        Calificacion updatedCalificacion = calificacionService.updateCalificacion(id, calificacion);
+        return new ResponseEntity<>(updatedCalificacion, HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteCalificacion(@PathVariable Integer id) {
+    public ResponseEntity<Void> deleteCalificacion(@PathVariable("id") Integer id) {
         calificacionService.deleteCalificacion(id);
-        return ResponseEntity.noContent().build();
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }

@@ -1,77 +1,90 @@
 package com.example.mscalificacion.service.impl;
 
 
-import com.example.mscalificacion.dto.CalificacionDto;
+import com.example.mscalificacion.dto.EstudianteDto;
 import com.example.mscalificacion.entity.Calificacion;
+import com.example.mscalificacion.feign.CursoFeign;
+import com.example.mscalificacion.feign.EstudianteFeign;
 import com.example.mscalificacion.repository.CalificacionRepository;
 import com.example.mscalificacion.service.CalificacionService;
 import com.example.mscalificacion.Excepciones.ResourceNotFoundException;
 
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class CalificacionServiceImpl implements CalificacionService {
+
     @Autowired
     private CalificacionRepository calificacionRepository;
 
     @Autowired
-    private ModelMapper modelMapper;
+    private EstudianteFeign estudianteFeign;
+
+    @Autowired
+    private CursoFeign cursoFeign;
 
     @Override
-    public List<CalificacionDto> getAllCalificaciones() {
-        List<Calificacion> calificaciones = calificacionRepository.findAll();
-        if (calificaciones.isEmpty()) {
-            throw new ResourceNotFoundException("No se encontraron calificaciones");
+    public List<Calificacion> getAllCalificaciones() {
+        return calificacionRepository.findAll();
+    }
+
+    @Override
+    public Calificacion getCalificacionById(Integer id) {
+        return calificacionRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Calificacion not found"));
+    }
+
+    @Override
+    public Calificacion createCalificacion(Calificacion calificacion) {
+        // Verifica si el estudiante existe llamando al servicio de estudiantes
+        if (estudianteFeign.getEstudianteById(calificacion.getEstudianteId()) == null) {
+            throw new ResourceNotFoundException("Estudiante not found");
         }
-        return calificaciones.stream()
-                .map(this::convertToDto)
-                .collect(Collectors.toList());
+
+        // Verifica si el curso existe llamando al servicio de cursos
+        if (cursoFeign.getCursoById(calificacion.getCursoId()) == null) {
+            throw new ResourceNotFoundException("Curso not found");
+        }
+
+        // Guarda la nueva calificación
+        return calificacionRepository.save(calificacion);
     }
 
     @Override
-    public CalificacionDto getCalificacionById(Integer id) {
-        Calificacion calificacion = calificacionRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Calificacion no encontrada con ID: " + id));
-        return convertToDto(calificacion);
-    }
-
-    @Override
-    public CalificacionDto createCalificacion(CalificacionDto calificacionDto) {
-        Calificacion calificacion = convertToEntity(calificacionDto);
-        Calificacion savedCalificacion = calificacionRepository.save(calificacion);
-        return convertToDto(savedCalificacion);
-    }
-
-    @Override
-    public CalificacionDto updateCalificacion(Integer id, CalificacionDto calificacionDto) {
+    public Calificacion updateCalificacion(Integer id, Calificacion calificacion) {
+        // Verifica si la calificación existe
         Calificacion existingCalificacion = calificacionRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Calificacion no encontrada con ID: " + id));
-        // Actualizar los campos necesarios de existingCalificacion con calificacionDto
-        existingCalificacion.setCalificacion(calificacionDto.getCalificacion());
-        existingCalificacion.setFecha(calificacionDto.getFecha());
-        // Guardar la calificación actualizada
-        Calificacion updatedCalificacion = calificacionRepository.save(existingCalificacion);
-        return convertToDto(updatedCalificacion);
+                .orElseThrow(() -> new ResourceNotFoundException("Calificacion not found"));
+
+        // Verifica si el estudiante existe llamando al servicio de estudiantes
+        if (estudianteFeign.getEstudianteById(calificacion.getEstudianteId()) == null) {
+            throw new ResourceNotFoundException("Estudiante not found");
+        }
+
+        // Verifica si el curso existe llamando al servicio de cursos
+        if (cursoFeign.getCursoById(calificacion.getCursoId()) == null) {
+            throw new ResourceNotFoundException("Curso not found");
+        }
+
+        // Actualiza los datos de la calificación
+        existingCalificacion.setEstudianteId(calificacion.getEstudianteId());
+        existingCalificacion.setCursoId(calificacion.getCursoId());
+        existingCalificacion.setNota(calificacion.getNota());
+
+        // Guarda la calificación actualizada
+        return calificacionRepository.save(existingCalificacion);
     }
 
     @Override
     public void deleteCalificacion(Integer id) {
-        Calificacion calificacion = calificacionRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Calificacion no encontrada con ID: " + id));
-        calificacionRepository.delete(calificacion);
-    }
+        // Verifica si la calificación existe
+        Calificacion existingCalificacion = calificacionRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Calificacion not found"));
 
-    // Métodos privados para conversión entre entidad y DTO
-    private CalificacionDto convertToDto(Calificacion calificacion) {
-        return modelMapper.map(calificacion, CalificacionDto.class);
-    }
-
-    private Calificacion convertToEntity(CalificacionDto calificacionDto) {
-        return modelMapper.map(calificacionDto, Calificacion.class);
+        // Elimina la calificación
+        calificacionRepository.delete(existingCalificacion);
     }
 }

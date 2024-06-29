@@ -14,14 +14,12 @@ public class Calificacion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    //@Transient
-  //  private EstudianteDto estudianteDto;
+    private Integer estudianteId;
 
-   // @Transient
-   // private CursoDto cursoDto;
+    private Integer cursoId;
 
-    private float calificacion;
-    private Date fecha;
+    private Double nota;
+
 
 
 
