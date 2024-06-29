@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a9e36a94-7113-4c25-a7fd-55af10ced8ad" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-calificacion/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-calificacion/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-calificacion/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-calificacion/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-calificacion/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-calificacion/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-calificacion/src/main/java/com/example/mscalificacion/Excepciones/excepciones.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-calificacion/src/main/java/com/example/mscalificacion/MsGestionEstudiantesApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-calificacion/src/main/java/com/example/mscalificacion/controller/CalificacionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-calificacion/src/main/java/com/example/mscalificacion/dto/CalificacionDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-calificacion/src/main/java/com/example/mscalificacion/dto/CursoDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-calificacion/src/main/java/com/example/mscalificacion/dto/EstudianteDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-calificacion/src/main/java/com/example/mscalificacion/entity/Calificacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-calificacion/src/main/java/com/example/mscalificacion/repository/CalificacionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-calificacion/src/main/java/com/example/mscalificacion/service/CalificacionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-calificacion/src/main/java/com/example/mscalificacion/service/impl/CalificacionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-calificacion/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-calificacion/src/test/java/com/example/msgestion_docentes/MsGestionDocentesApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-curso/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-curso/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-curso/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-curso/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-curso/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-curso/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-curso/src/main/java/com/example/msgestion_estudiantes/MsGestionEstudiantesApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-curso/src/main/java/com/example/msgestion_estudiantes/controller/CursoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-curso/src/main/java/com/example/msgestion_estudiantes/entity/Curso.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-curso/src/main/java/com/example/msgestion_estudiantes/repository/CursoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-curso/src/main/java/com/example/msgestion_estudiantes/service/CursoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-curso/src/main/java/com/example/msgestion_estudiantes/service/impl/CursoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-curso/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-curso/src/test/java/com/example/msgestion_docentes/MsGestionDocentesApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-gestion_estudiantes/src/main/java/com/example/msgestion_estudiantes/controller/Historial_AcadémicoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-gestion_estudiantes/src/main/java/com/example/msgestion_estudiantes/entity/Estudiante.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-gestion_estudiantes/src/main/java/com/example/msgestion_estudiantes/entity/Estudiante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-gestion_estudiantes/src/main/java/com/example/msgestion_estudiantes/entity/Historial_Académico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-gestion_estudiantes/src/main/java/com/example/msgestion_estudiantes/repository/Historial_AcadémicoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-gestion_estudiantes/src/main/java/com/example/msgestion_estudiantes/service/Historial_AcadémicoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-gestion_estudiantes/src/main/java/com/example/msgestion_estudiantes/service/impl/Historial_AcadémicoServiceImpl.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2hbd830XRlDGCxIiXgLSCKn8PBv" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.MsGestionEstudiantesApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/Videos/DAD-2024-1-G2-gateway-server/ms-calificacion/src/main/java/com/example/mscalificacion",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Videos\DAD-2024-1-G2-gateway-server\ms-calificacion\src\main\java\com\example\mscalificacion" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="ms-alificacion" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="ms-alificacion" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MsGestionEstudiantesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ms-calificacion" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.mscalificacion.MsGestionEstudiantesApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a9e36a94-7113-4c25-a7fd-55af10ced8ad" name="Changes" comment="" />
+      <created>1717866547263</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1717866547263</updated>
+      <workItem from="1717866548297" duration="5547000" />
+      <workItem from="1717903887212" duration="599000" />
+      <workItem from="1717909565332" duration="600000" />
+      <workItem from="1717955979799" duration="632000" />
+      <workItem from="1717957640884" duration="7476000" />
+      <workItem from="1718008292150" duration="604000" />
+      <workItem from="1719637903849" duration="181000" />
+      <workItem from="1719638531885" duration="154000" />
+      <workItem from="1719638757842" duration="2555000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

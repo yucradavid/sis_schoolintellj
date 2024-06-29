@@ -15,14 +15,10 @@ public class RegistroAsistencia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    private Long estudianteId;
+    private Long cursoId;
     private LocalDate fecha;
-    private String estado;
-    private String observaciones;
-    private Integer Estudianteid;
-    private Integer Docenteid;
-    @Transient
-    private DocenteDto docenteDto ;
-    @Transient
-    private EstudianteDto estudianteDto ;
+    private Boolean presente;
 
 }
