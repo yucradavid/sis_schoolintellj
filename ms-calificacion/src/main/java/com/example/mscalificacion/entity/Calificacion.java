@@ -19,6 +19,7 @@ public class Calificacion {
     private Integer cursoId;
 
     private Double nota;
+    private String comentarios;
 
 
 

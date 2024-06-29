@@ -28,73 +28,73 @@ import { MatDialog } from '@angular/material/dialog';
                 <div class="p-2 overflow-scroll px-0">
                     <table class="w-full table-fixed">
                         <thead class="bg-primary-600 text-white">
-                            <tr>
-                                <th class="w-1/6 table-head text-center px-5 border-r">#</th>
-                                <th class="w-2/6 table-header text-center px-5 border-r">
-                                    Nombre Completo
-                                </th>
-                                <th class="w-2/6 table-header text-center px-5 border-r">
-                                    fecha Nacimiento
-                                </th>
-                                <th class="w-2/6 table-header text-center px-5 border-r">
-                                    direccion
-                                </th>
+                        <tr>
+                            <th class="w-1/6 table-head text-center px-5 border-r">#</th>
+                            <th class="w-2/6 table-header text-center px-5 border-r">
+                                Nombre Completo
+                            </th>
+                            <th class="w-2/6 table-header text-center px-5 border-r">
+                                fecha Nacimiento
+                            </th>
+                            <th class="w-2/6 table-header text-center px-5 border-r">
+                                direccion
+                            </th>
 
-                                <th class="w-2/6 table-header text-center px-5 border-r">
-                                    telefono
-                                </th>
+                            <th class="w-2/6 table-header text-center px-5 border-r">
+                                telefono
+                            </th>
 
-                                <th class="w-1/6 table-header text-center border-r">
-                                    email
-                                </th>
-                                <th class="w-2/6 table-header text-center">
-                                    Especialidad
-                                </th>
-                            </tr>
+                            <th class="w-1/6 table-header text-center border-r">
+                                email
+                            </th>
+                            <th class="w-2/6 table-header text-center">
+                                Especialidad
+                            </th>
+                        </tr>
                         </thead>
 
                         <tbody
                             class="bg-white"
                             *ngFor="let r of teachers; let i = index">
-                            <tr class="hover:bg-gray-100">
-                                <td class="w-1/6 p-2 text-center border-b">
-                                    {{ i }}
-                                </td>
-                                <td class="w-2/6 p-2  text-start border-b text-sm">
-                                    {{ r.nombreCompleto }}
-                                </td>
-                                <td class="w-2/6 p-2  text-start border-b text-sm">
-                                    {{ r.fechaNacimiento }}
-                                </td>
-                                <td class="w-2/6 p-2  text-start border-b text-sm">
-                                    {{ r.direccion }}
-                                </td>
-                                <td class="w-2/6 p-2  text-start border-b text-sm">
-                                    {{ r.telefono }}
-                                </td>
-                                <td class="w-2/6 p-2  text-start border-b text-sm">
-                                    {{ r.email }}
-                                </td>
-                                <td class="w-2/6 p-2  text-start border-b text-sm">
-                                    {{ r.especialidad }}
-                                </td>
+                        <tr class="hover:bg-gray-100">
+                            <td class="w-1/6 p-2 text-center border-b">
+                                {{ i }}
+                            </td>
+                            <td class="w-2/6 p-2  text-start border-b text-sm">
+                                {{ r.nombreCompleto }}
+                            </td>
+                            <td class="w-2/6 p-2  text-start border-b text-sm">
+                                {{ r.fechaNacimiento }}
+                            </td>
+                            <td class="w-2/6 p-2  text-start border-b text-sm">
+                                {{ r.direccion }}
+                            </td>
+                            <td class="w-2/6 p-2  text-start border-b text-sm">
+                                {{ r.telefono }}
+                            </td>
+                            <td class="w-2/6 p-2  text-start border-b text-sm">
+                                {{ r.email }}
+                            </td>
+                            <td class="w-2/6 p-2  text-start border-b text-sm">
+                                {{ r.especialidad }}
+                            </td>
 
 
-                                <td class="w-2/6 p-2 text-center border-b text-sm">
-                                    <div class="flex justify-center space-x-3">
-                                        <mat-icon class="text-amber-400 hover:text-amber-500 cursor-pointer"
-                                            (click)="goEdit(r.id)">edit</mat-icon>
+                            <td class="w-2/6 p-2 text-center border-b text-sm">
+                                <div class="flex justify-center space-x-3">
+                                    <mat-icon class="text-amber-400 hover:text-amber-500 cursor-pointer"
+                                              (click)="goEdit(r.id)">edit</mat-icon>
 
-                                        <mat-icon class="text-rose-500 hover:text-rose-600 cursor-pointer"
-                                            (click)="goDelete(r.id)">delete_sweep</mat-icon>
-                                       <!-- <mat-icon
-                                            class="text-sky-400 hover:text-sky-600 cursor-pointer"
-                                            (click)="goAssign(r.id)"
-                                            >swap_horiz
-                                        </mat-icon>-->
-                                    </div>
-                                </td>
-                            </tr>
+                                    <mat-icon class="text-rose-500 hover:text-rose-600 cursor-pointer"
+                                              (click)="goDelete(r.id)">delete_sweep</mat-icon>
+                                    <!-- <mat-icon
+                                         class="text-sky-400 hover:text-sky-600 cursor-pointer"
+                                         (click)="goAssign(r.id)"
+                                         >swap_horiz
+                                     </mat-icon>-->
+                                </div>
+                            </td>
+                        </tr>
                         </tbody>
                     </table>
                     <!--<div class="px-5 py-2 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between">
