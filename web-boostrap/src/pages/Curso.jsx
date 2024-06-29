@@ -3,36 +3,36 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import MainLayout from '../layouts/MainLayout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import '../App.css';
-import {faTrashAlt} from "@fortawesome/free-solid-svg-icons"; // Asegúrate de importar los estilos personalizados
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import '../App.css'; // Asegúrate de importar los estilos personalizados
 
 const Curso = () => {
-
-    const [curso, setNombreCurso] = useState([]);
+    const [cursos, setCursos] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {
-        const fetchCurso = async () => {
+        const fetchCursos = async () => {
             try {
                 const response = await axios.get('http://localhost:82/asignatura');
                 console.log('Datos de cursos:', response.data); // Verifica los datos en la consola
-                setNombreCurso(response.data);
+                setCursos(response.data);
             } catch (error) {
                 console.error('Error fetching cursos:', error);
             }
         };
-        fetchCurso();
+        fetchCursos();
     }, []);
 
     const handleDelete = async (id) => {
         try {
             await axios.delete(`http://localhost:82/asignatura/${id}`);
-            setNombreCurso(curso.filter(curso => curso.id !== id));
-            console.log(`Docente eliminado con éxito: ${id}`);
+            setCursos(cursos.filter(curso => curso.id !== id));
+            console.log(`Curso eliminado con éxito: ${id}`);
         } catch (error) {
-            console.error('Error al eliminar docente:', error);
+            console.error('Error al eliminar curso:', error);
         }
     };
+
     const handleNew = () => {
         navigate('/curso/form');
     };
@@ -56,14 +56,14 @@ const Curso = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {curso.map(curso => (
+                            {cursos.map(curso => (
                                 <tr key={curso.id}>
                                     <td>{curso.id}</td>
-                                    <td>{curso.setnombreCurso}</td>
-                                    <td>{curso.sethorasAcademicas}</td>
-                                    <td>{curso.docenteid}</td>
+                                    <td>{curso.nombreCurso}</td>
+                                    <td>{curso.horasAcademicas}</td>
+                                    <td>{curso.detallesDocente.nombreCompleto}</td>
                                     <td>
-                                    <button
+                                        <button
                                             className="action-btn ms-2"
                                             onClick={() => handleDelete(curso.id)}
                                         >
