@@ -26,7 +26,7 @@ function Login() {
             await new Promise(resolve => setTimeout(resolve, 1000));
 
             // Lógica de inicio de sesión
-            const response = await fetch('http://localhost:8080/auth/login', {
+            const response = await fetch('http://localhost:82/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
